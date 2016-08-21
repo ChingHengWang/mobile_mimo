@@ -1,3 +1,4 @@
+close all
 m=18.8;
 r=0.065;
 k=1;
@@ -5,6 +6,9 @@ b=1;
 
 Ki=1.2;
 Kp=12;
+%Kp=2;
+%Ki=0.2
+
 Ts=0.01
 s=tf('s')
 
@@ -13,7 +17,7 @@ G=(k/r)/(m*s+b)
 %C=tf([1]);
 T=feedback(C*G,H1*H2)
 H1=(1-exp(-Ts*s))/(Ts*s)
-H2=100/(s+100)
+H2=60/(s+60)
 
 figure(1);
 opts = bodeoptions;
@@ -68,8 +72,9 @@ bode(H2,opts4);grid on;title('sensor filter bode');
 
 figure(6);
 T=feedback(C*G,H1*H2);
-[y,t,x]=step(T);step(T);grid on;title('totaly Clossedloop time unit step response');axis([0 120 0 3]);
+[y,t,x]=step(T);step(T);grid on;title('totaly Clossedloop time unit step response');axis([0 120 0 3]);hold on;
 y_stable=1;
+
 for i=1:length(y)
     if y(i)>y_stable
         break;
@@ -81,8 +86,8 @@ tp=t(index);
 for i=1:length(y)
     if max(y(i:length(y)))<=1.02*y_stable
         if min(y(i:length(y)))>=0.98*y_stable
-            max(y(i:length(y)))
-            min(y(i:length(y)))
+            max(y(i:length(y)));
+            min(y(i:length(y)));
             break;
         end
     end
@@ -92,3 +97,53 @@ tp
 tr
 ts
 
+H21=100/(s+100)
+T1=feedback(C*G,H1*H21);
+[y,t,x]=step(T1);step(T1);hold on;
+for i=1:length(y)
+    if y(i)>y_stable
+        break;
+    end
+end
+tr1=t(i);
+[max_response,index]=max(y);
+tp1=t(index);
+for i=1:length(y)
+    if max(y(i:length(y)))<=1.02*y_stable
+        if min(y(i:length(y)))>=0.98*y_stable
+            max(y(i:length(y)));
+            min(y(i:length(y)));
+            break;
+        end
+    end
+end
+ts1=t(i);
+tp1
+tr1
+ts1
+
+
+H22=30/(s+30)
+T2=feedback(C*G,H1*H22);
+[y,t,x]=step(T2);step(T2);hold on;
+for i=1:length(y)
+    if y(i)>y_stable
+        break;
+    end
+end
+tr2=t(i);
+[max_response,index]=max(y);
+tp2=t(index);
+for i=1:length(y)
+    if max(y(i:length(y)))<=1.02*y_stable
+        if min(y(i:length(y)))>=0.98*y_stable
+            max(y(i:length(y)));
+            min(y(i:length(y)));
+            break;
+        end
+    end
+end
+ts2=t(i);
+tp2
+tr2
+ts2

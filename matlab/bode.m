@@ -6,24 +6,24 @@ b=1;
 
 Ki=1.2;
 Kp=12;
-%Kp=2;
-%Ki=0.2
+% Kp=2;
+% Ki=0.2
 
 Ts=0.01
 s=tf('s')
 
 C=(Kp*s+Ki)/s;
 G=(k/r)/(m*s+b)
-%C=tf([1]);
-T=feedback(C*G,H1*H2)
+% C=tf([1]);
 H1=(1-exp(-Ts*s))/(Ts*s)
 H2=60/(s+60)
+T=feedback(C*G,H1*H2)
 
 figure(1);
 opts = bodeoptions;
-opts.YLim = {[-200,100]}; %{maglimits;phaselimits}
+opts.YLim = {[-200,100]}; % {maglimits;phaselimits}
 opts.XLim = {[10^-4,10^4]};
-opts.YLimMode = {'manual';'auto'}; %{maglimits mode;phaselimits mode}
+opts.YLimMode = {'manual';'auto'}; % {maglimits mode;phaselimits mode}
 bode(G*H1,opts);grid on;title('platform bode');
 
 
@@ -50,24 +50,24 @@ ts=x(i);
 
 figure(3);
 opts2 = bodeoptions;
-opts2.YLim = {[-200,100]}; %{maglimits;phaselimits}
+opts2.YLim = {[-200,100]}; % {maglimits;phaselimits}
 opts2.XLim = {[10^-4,10^4]};
-opts2.YLimMode = {'manual';'auto'}; %{maglimits mode;phaselimits mode}
+opts2.YLimMode = {'manual';'auto'}; % {maglimits mode;phaselimits mode}
 bode(C,opts2);grid on;title('controller bode');
 
 
 figure(4);
 opts3 = bodeoptions;
-opts3.YLim = {[-200,100]}; %{maglimits;phaselimits}
+opts3.YLim = {[-200,100]}; % {maglimits;phaselimits}
 opts3.XLim = {[10^-4,10^4]};
-opts3.YLimMode = {'manual';'auto'}; %{maglimits mode;phaselimits mode}
+opts3.YLimMode = {'manual';'auto'}; % {maglimits mode;phaselimits mode}
 bode(C*G*H1*H2,opts3);grid on;title('totoaly open loop bode');
 
 figure(5);
 opts4 = bodeoptions;
-opts4.YLim = {[-200,100]}; %{maglimits;phaselimits}
+opts4.YLim = {[-200,100]}; % {maglimits;phaselimits}
 opts4.XLim = {[10^-4,10^4]};
-opts4.YLimMode = {'manual';'auto'}; %{maglimits mode;phaselimits mode}
+opts4.YLimMode = {'manual';'auto'}; % {maglimits mode;phaselimits mode}
 bode(H2,opts4);grid on;title('sensor filter bode');
 
 figure(6);

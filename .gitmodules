@@ -1,0 +1,3 @@
+[submodule "matlab/ekf_slam_Matlab_simulation"]
+	path = matlab/ekf_slam_Matlab_simulation
+	url = https://github.com/ChingHengWang/ekf_slam_Matlab_simulation.git

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ssh odroid@metal1
+rosrun rosserial_python serial_node.py _port:=/dev/mega_base _baud:=115200
+
+rostopic echo /feedback_wheel_angularVel
+
+rosrun andbot mimo_mybot_controller
+
+V : 0.3
+1792*10.96/32767

@@ -43,7 +43,7 @@ wl_rpm=wl*60/6.28
 
 ar= (2*Ax+Az*l)/(2*r); %right wheel angular acceleration rad/s^2
 ar_rpm=wr*60/6.28;
-al= (2*Vx-Az*l)/(2*r);
+al= (2*Ax-Az*l)/(2*r);
 al_rpm=wl*60/6.28;
 
 

@@ -27,7 +27,7 @@
 >
 ![](https://github.com/ChingHengWang/mobile_mimo/blob/master/04_PI_controller_design_sim/fig/diff_mobile_model_simple.png) 
 
-
+ 
 ----
 ## changelog
 * 22-11-2016 first-write	

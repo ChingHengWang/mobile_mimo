@@ -44,6 +44,8 @@
 * finite differential sample : LTI system (1-exp(-Ts`*`s))/(Ts`*`s)
 * no anti-windup now
  
+![](https://github.com/ChingHengWang/mobile_mimo/blob/master/04_PI_controller_design_sim/fig/time_response.png) 
+
 ----
 ## changelog
 * 22-11-2016 first-write	

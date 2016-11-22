@@ -21,6 +21,8 @@
 ## `vnh5019_base/src/vnh5019_base_mimo_ver2.ino`
 >this is main mimo base controller code, using PI controller and Feedforward.
 
+## result
+![](https://docs.google.com/document/d/1--L6bD2Wg7o4vJPbwjY9xnrWfcLMokbplmrCRCetdjY/edit)
 ----
 ## changelog
 * 22-11-2016 first-write	

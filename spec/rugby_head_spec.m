@@ -1,4 +1,4 @@
-% rugby head tilt rotation calculation
+% rugby head tilt and yaw rotation calculation
 
 m = 1.2; %head weight kg
 r = 0.12; %head radius
@@ -13,17 +13,20 @@ T_tilt_require = m*g*e + I_tilt * arfa %Nm
 W_tilt_require = w %rad/s
 
 I_yaw = m * r^2;%head Inertia for tilt axis
-T_yaw_require = m*g*e + I_tilt * arfa %Nm
-W_tilt_require = w %rad/s
+T_yaw_require = I_yaw * arfa %Nm   
+                             %neglect bearing friction force
+W_yaw_require = w %rad/s
+
+t_yaw_m = T_yaw_require  %kg-cm
+w_yaw_m = W_yaw_require  %rpm
+
 
 %Pulley radius
 r1 = 1; %belt wheel radius 1
 r2 = 1; %belt wheel radius 2
 
 % motor
-t_m = T_tilt_require * r1/r2 * 1/9.81 * 100 %kg-cm
-w_m = W_tilt_require * r2/r1 * 60/1 * 1/6.28 %rpm
+t_tilt_m = T_tilt_require * r1/r2 * 1/9.81 * 100 %kg-cm
+w_tilt_m = W_tilt_require * r2/r1 * 60/1 * 1/6.28 %rpm
 
 %result
-%t_m = 15.5062 kg-cm
-%w_m = 30 rpm

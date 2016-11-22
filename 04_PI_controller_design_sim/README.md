@@ -24,9 +24,19 @@
 
 ----
 ## `diff_mobile_model_simple.slx`
->
 ![](https://github.com/ChingHengWang/mobile_mimo/blob/master/04_PI_controller_design_sim/fig/diff_mobile_model_simple.png) 
-
+* Up Loop is Linear Velocity Loop , Down Loop is Angular Velocity Loop
+* Vd is Linear Velocity command, Wd is Angular Velociy command
+* two Loop all have Feedforward item, but now disable it, so gain is zero.
+* use Saturation block to simulate robot saturation condition, for us is 24 limit, for ud is 24 limit
+* V transfer function 
+  * Numerator coefficients : [0.67]
+  * Denominator coefficients : [1 11.24]
+* W transfer function 
+  * Numerator coefficients : [2.5]
+  * Denominator coefficients : [1 12.5]  
+* finite differential sample : LTI system (1-exp(-Ts*s))/(Ts*s)
+* no anti-windup now
  
 ----
 ## changelog

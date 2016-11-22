@@ -24,7 +24,7 @@
 
 ----
 ## `diff_mobile_model_simple.slx`
-![](https://github.com/ChingHengWang/mobile_mimo/blob/master/04_PI_controller_design_sim/fig/diff_mobile_model_simple.png) 
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6taENWSEh6VVZ2RlU)
 
 * Up Loop is Linear Velocity Loop , Down Loop is Angular Velocity Loop
 
@@ -44,7 +44,7 @@
 * finite differential sample : LTI system (1-exp(-Ts`*`s))/(Ts`*`s)
 * no anti-windup now
  
-![](https://github.com/ChingHengWang/mobile_mimo/blob/master/04_PI_controller_design_sim/fig/time_response.png) 
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tZzR2OTZtN3E0TkU) 
 
 * up figure : V control
 * down figure : W control

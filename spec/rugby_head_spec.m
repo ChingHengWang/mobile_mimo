@@ -6,14 +6,14 @@ r = 0.12; %head radius
 w = 3.14*0.7;%tilt rotate speed rad/s
 acc_time = 1.0; %acceleration time
 arfa = w / acc_time; %tilt rotate angular acceleration
-e = 0.12; %distance between motor and head mass center
+e = 0.06; %distance between motor and head mass center
 g = 9.81;
-I_tilt = m * e^2;%head Inertia for tilt axis
+I_tilt = m * r^2;%head Inertia for tilt axis
 T_tilt_require = m*g*e + I_tilt * arfa %Nm
 W_tilt_require = w %rad/s
 
 I_yaw = m * r^2;%head Inertia for tilt axis
-T_yaw_require = I_yaw * arfa %Nm   
+T_yaw_require = I_yaw * arfa* 1/9.81 * 100 %kgcm   
                              %neglect bearing friction force
 W_yaw_require = w %rad/s
 

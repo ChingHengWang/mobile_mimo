@@ -45,7 +45,11 @@
 * no anti-windup now
  
 ![](https://github.com/ChingHengWang/mobile_mimo/blob/master/04_PI_controller_design_sim/fig/time_response.png) 
+* up figure : V control
+* down figure : W control
+* note : model couldn't be totally accurate, so simulaiton response has some oscillation but practical is ok
 
+.
 ----
 ## changelog
 * 22-11-2016 first-write	

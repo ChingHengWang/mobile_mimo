@@ -40,6 +40,50 @@ add system delay, add finit differential sampling or moving filter .
     H1=(1-exp(-Ts*s))/(Ts*s);
 >Finite Sampling block, Ts is sampling time
 
+    figure(1);
+    opts1 = bodeoptions;
+    opts1.YLim = {[-200,100];[-360,0]}; %     {maglimits;phaselimits}
+    opts1.XLim = {[10^-4,10^4]};
+    opts1.YLimMode = {'manual';'manual'}; % {maglimits mode;phaselimits mode}
+
+    subplot(2,2,1)
+    bode(G1*H1*H2,opts1);grid on;title('platform bode');
+    hold on;
+    subplot(2,2,2)
+    bode(G2*H1*H2,opts1);grid on;title('platform bode');
+    hold on;
+    subplot(2,2,3)
+    bode(G3*H1*H2,opts1);grid on;title('platform bode');
+    hold on;
+    subplot(2,2,4)
+    bode(G4*H1*H2,opts1);grid on;title('platform bode');
+>plot Open Loop bode of G1 G2 G3 G4
+>G2 is design model
+
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tSjYxRFNEVE9RRzA)
+
+
+    figure(2);
+    opts2 = bodeoptions;
+    opts2.YLim = {[-200,100];[-360,0]}; % {maglimits;phaselimits}
+    opts2.XLim = {[10^-4,10^4]};
+    opts2.YLimMode = {'manual';'manual'}; % {maglimits mode;phaselimits mode}
+    subplot(2,2,1)
+    bode(C*G1*H1*H2,opts1);grid on;title('closeloop bode');
+    hold on;
+    subplot(2,2,2)
+    bode(C*G2*H1*H2,opts1);grid on;title('closeloop bode');
+    hold on;
+    subplot(2,2,3)
+    bode(C*G3*H1*H2,opts1);grid on;title('closeloop bode (design this)');
+    hold on;
+    subplot(2,2,4)
+    bode(C*G4*H1*H2,opts1);grid on;title('closeloop bode');
+>plot Close Loop bode of G1 G2 G3 G4
+>G3 is design model
+
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tbjRRNFdvVmo0UXc)
+
 ----
 ## `bode_W.m`
 
@@ -73,3 +117,46 @@ add system delay, add finit differential sampling or moving filter .
     H1=(1-exp(-Ts*s))/(Ts*s);
 >Finite Sampling block, Ts is sampling time
 
+    figure(1);
+    opts1 = bodeoptions;
+    opts1.YLim = {[-200,100];[-360,0]}; %     {maglimits;phaselimits}
+    opts1.XLim = {[10^-4,10^4]};
+    opts1.YLimMode = {'manual';'manual'}; % {maglimits mode;phaselimits mode}
+
+    subplot(2,2,1)
+    bode(G1*H1*H2,opts1);grid on;title('platform bode');
+    hold on;
+    subplot(2,2,2)
+    bode(G2*H1*H2,opts1);grid on;title('platform bode');
+    hold on;
+    subplot(2,2,3)
+    bode(G3*H1*H2,opts1);grid on;title('platform bode');
+    hold on;
+    subplot(2,2,4)
+    bode(G4*H1*H2,opts1);grid on;title('platform bode');
+>plot Open Loop bode of G1 G2 G3 G4
+>G2 is design model
+
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tMy1tOW45NU5YZTg)
+
+
+    figure(2);
+    opts2 = bodeoptions;
+    opts2.YLim = {[-200,100];[-360,0]}; % {maglimits;phaselimits}
+    opts2.XLim = {[10^-4,10^4]};
+    opts2.YLimMode = {'manual';'manual'}; % {maglimits mode;phaselimits mode}
+    subplot(2,2,1)
+    bode(C*G1*H1*H2,opts1);grid on;title('closeloop bode');
+    hold on;
+    subplot(2,2,2)
+    bode(C*G2*H1*H2,opts1);grid on;title('closeloop bode');
+    hold on;
+    subplot(2,2,3)
+    bode(C*G3*H1*H2,opts1);grid on;title('closeloop bode (design this)');
+    hold on;
+    subplot(2,2,4)
+    bode(C*G4*H1*H2,opts1);grid on;title('closeloop bode');
+>plot Close Loop bode of G1 G2 G3 G4
+>G3 is design model
+
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6ta1U2bGhaMzhYbm8)

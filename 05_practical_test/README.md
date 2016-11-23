@@ -25,6 +25,11 @@
 ![](https://drive.google.com/uc?view&id=0B134T1DTCk6tY0VoWnVrNU5zM3M)
 
 #result
+1. first figure : V
+2. second figure : W
+3. third figure : uL
+4. fourth figure : uR 
+
 ###Velocity 2V Angular 4V
 ![](https://drive.google.com/uc?view&id=0B134T1DTCk6tdXFpRTJJWVl0UzQ)
 

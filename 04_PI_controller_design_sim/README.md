@@ -25,7 +25,7 @@
 ----
 ## `diff_mobile_model_simple.slx`
 ![](https://drive.google.com/uc?view&id=0B134T1DTCk6taENWSEh6VVZ2RlU)
-
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tYmtNVHBoMmdBVGs)
 * Up Loop is Linear Velocity Loop , Down Loop is Angular Velocity Loop
 
 * Vd is Linear Velocity command, Wd is Angular Velociy command

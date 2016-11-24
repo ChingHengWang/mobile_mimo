@@ -21,8 +21,27 @@
 ## `vnh5019_base/src/vnh5019_base_mimo_ver2.ino`
 >this is main mimo base controller code, using PI controller and Feedforward.
 
-## result
-![](https://drive.google.com/uc?view&id=1--L6bD2Wg7o4vJPbwjY9xnrWfcLMokbplmrCRCetdjY)
+## mimo spec
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tY0VoWnVrNU5zM3M)
+
+#result
+1. first figure : V
+2. second figure : W
+3. third figure : uL
+4. fourth figure : uR 
+
+###Velocity 2V Angular 4V
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tdXFpRTJJWVl0UzQ)
+
+###Velocity 4V Angular 6V
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6ta0NzY1BzcjJqcW8)
+
+###Velocity 6V Angular 8V
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tYzkwbk5FXzk0cEE)
+
+###Velocity 8V Angular X
+![](https://drive.google.com/uc?view&id=0B134T1DTCk6tZktqTEJLNXRqNkU)
+
 ----
 ## changelog
 * 22-11-2016 first-write	

@@ -41,7 +41,7 @@ const int Tx_L = 11;
 const int Rx_L = 10; 
 */
 #define LOOPTIME        1
-#define TOPIC_LOOPTIME        10
+#define TOPIC_LOOPTIME        40
 //global variable Start
 
 //Control Stratergy
@@ -336,6 +336,7 @@ void readFeadback_angularVel_R()
 void setup() 
 {
   nh.getHardware()->setBaud(1000000);
+//  nh.getHardware()->setBaud(115200);
   nh.initNode();
   nh.advertise(feedback_vel_pub);
   nh.advertise(feedback_wheel_angularVel_pub);
